@@ -396,7 +396,7 @@ footer h3 {
 @media screen and (max-width: 840px) {
 
     .Interests{
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         align-items: center;
     }
     
