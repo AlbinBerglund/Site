@@ -323,18 +323,19 @@ button:hover {
 .video_container_Interests {
     position: relative;
     overflow: hidden;
-    width: 95%; /* Adjust as needed */
     max-width: calc(25 * var(--vh));
-    border-radius: calc(1 * var(--vh));    
+    max-height: calc(50 * var(--vh));
+    border-radius: calc(1 * var(--vh));  
+    margin: calc(1 * var(--vh)); 
 }
 
 .video_container_Interests video {
     width: 100%;
-    height: auto;
     display: block;
 }
 .Interests{
     display: flex;
+    margin-top: calc(2 * var(--vh));  
 }
 
 
@@ -394,6 +395,12 @@ footer h3 {
 
 @media screen and (max-width: 840px) {
 
+    .Interests{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+
     .about_me{
         width: 100%;
         padding: calc(2 * var(--vh));
@@ -406,7 +413,7 @@ footer h3 {
         margin-top: calc(1.5 * var(--vh));
     }
     
-    .video_container {
+    .video_container{
         width: 100%;
         border-radius: 0;
     }
