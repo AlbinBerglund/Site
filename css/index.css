@@ -299,6 +299,7 @@ button:hover {
 
 .about_me_info_1, .about_me_info_2{
     display: flex;
+    align-items: flex-start;
     padding: calc(3 * var(--vh)) 0 0 0;
 }
 
@@ -396,11 +397,26 @@ footer h3 {
 @media screen and (max-width: 840px) {
 
     .Interests{
+        flex-direction: column;
         flex-wrap: wrap-reverse;
         align-items: center;
     }
     
+    .about_me_info_1, .about_me_info_2 {
+        flex-direction: column;
+        align-items: center;
+        padding: calc(1.5 * var(--vh)) 0;
+    }
 
+    .about_me_info_1 img, .about_me_info_2 img {
+        float: left;
+        margin: 0 calc(1 * var(--vh)) calc(1 * var(--vh)) 0;
+    }
+
+    .about_me_info_3{
+        margin-left: calc(2 * var(--vh));
+    }
+    
     .about_me{
         width: 100%;
         padding: calc(2 * var(--vh));
