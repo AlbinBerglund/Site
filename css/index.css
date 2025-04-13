@@ -177,6 +177,17 @@ main {
     width: 100%;
 }
 
+main img {
+    transition: all 0.4s ease;
+    filter: brightness(90%) contrast(110%);
+  }
+  
+main img:hover {
+    transform: scale(1.05) rotate(1deg);
+    filter: brightness(100%) contrast(120%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
 .main_icons a {
     padding: calc(0.8 * var(--vh));
     transition: transform 0.3s;
@@ -277,6 +288,7 @@ button:hover {
     max-height: calc(30 * var(--vh));
     border-radius: calc(2 * var(--vh));
     padding: calc(1 * var(--vh));
+    object-fit: contain;
 }
 
 .about_me_info{
@@ -294,6 +306,36 @@ button:hover {
     flex-direction: row-reverse;
 }
 
+.about_me_info_3 a{
+    text-decoration: none;
+    color: var(--accent-color);
+    word-wrap: break-word;
+}
+
+
+
+.about_me_info_3 h2{
+    text-align: left;
+}
+.about_me_title{
+    margin-left: calc(1.5 * var(--vh));  
+}
+.video_container_Interests {
+    position: relative;
+    overflow: hidden;
+    width: 95%; /* Adjust as needed */
+    max-width: calc(25 * var(--vh));
+    border-radius: calc(1 * var(--vh));    
+}
+
+.video_container_Interests video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.Interests{
+    display: flex;
+}
 
 
 /* About me end */
