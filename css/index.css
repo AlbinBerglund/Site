@@ -153,6 +153,38 @@ header a {
     color: var(--accent-color);
 }
 
+/*header animation start */
+
+.main_title h1, .main_title h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.main_info {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main_icons a {
+    transition: transform 0.3s ease;
+}
+.main_icons a:hover {
+    transform: translateY(-3px);
+}
+
+/*header animation end */
+
 /* Header end */
 
 /* Main start */
@@ -182,11 +214,6 @@ main img {
     filter: brightness(90%) contrast(110%);
   }
   
-main img:hover {
-    transform: scale(1.05) rotate(1deg);
-    filter: brightness(100%) contrast(120%);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  }
 
 .main_icons a {
     padding: calc(0.8 * var(--vh));
@@ -241,7 +268,7 @@ button:hover {
 .video_container {
     position: absolute;
     overflow: hidden;
-    width: 95%; /* Adjust as needed */
+    width: 95%; 
     max-width: calc(120 * var(--vh));
     margin: 0 auto;
     z-index: 1;
@@ -321,6 +348,9 @@ button:hover {
 .about_me_title{
     margin-left: calc(1.5 * var(--vh));  
 }
+.about_me_title_sport{
+    margin-left: calc(1.5 * var(--vh));  
+}
 .video_container_Interests {
     position: relative;
     overflow: hidden;
@@ -337,6 +367,38 @@ button:hover {
 .Interests{
     display: flex;
     margin-top: calc(2 * var(--vh));  
+}
+
+.about_me_info_1,
+.about_me_info_2,
+.Interests {
+    opacity: 0;
+    transform: translateX(calc(-4 * var(--vh)));
+    animation: slideIn 1s ease-out forwards;
+}
+
+.about_me_info_2 {
+    transform: translateX(calc(4 * var(--vh))); 
+}
+
+.Interests {
+    transform: translateX(calc(-4 * var(--vh))); 
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about_me_info_1 { animation-delay: 0.3s; }
+.about_me_info_2 { animation-delay: 0.4s; }
+.Interests { animation-delay: 0.5s; }
+
+
+.about_me {
+    overflow-x: hidden; 
 }
 
 

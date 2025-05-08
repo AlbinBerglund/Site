@@ -123,3 +123,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.onload = display_time;
 });
+
+//animation
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.about_me_info_1, .about_me_info_2, .Interests');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    });
+
+    elements.forEach(element => {
+        element.style.animationPlayState = 'paused';
+        observer.observe(element);
+    });
+});
